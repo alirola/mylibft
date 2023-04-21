@@ -6,11 +6,13 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 12:38:11 by alirola-          #+#    #+#             */
-/*   Updated: 2023/04/19 12:58:39 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/04/21 11:34:49 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isalpha(int c)
+#include "libft.h"
+
+int	ft_isalpha(int c)
 {
 	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
 		return (1);

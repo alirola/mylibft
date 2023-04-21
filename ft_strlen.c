@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 13:19:24 by alirola-          #+#    #+#             */
-/*   Updated: 2023/04/19 13:25:30 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/04/21 11:43:04 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	counter;
+	unsigned int	i;
 
-	counter = 0;
-	while (*s != "\0")
+	i = 0;
+	while (s[i] != '\0')
 	{
-		counter++;
-		s++;
+		i++;
 	}
-	return (counter);
+	return (i);
 }
