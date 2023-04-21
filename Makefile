@@ -10,6 +10,8 @@ FILES = ft_isalpha.c\
 		ft_strlen.c\
 		ft_toupper.c\
 		ft_tolower.c\
+		ft_strncmp.c\
+		ft_memset.c\
 
 OBJS = $(FILES:.c=.o)
 
@@ -27,6 +29,6 @@ clean:
 fclean:
 	rm -f $(NAME) $(OBJS)
 
-re : all fclean
+re : all 
 
 .PHONY : all re fclean clean
