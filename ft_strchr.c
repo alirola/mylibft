@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 13:11:18 by alirola-          #+#    #+#             */
-/*   Updated: 2023/04/24 14:13:05 by alirola-         ###   ########.fr       */
+/*   Created: 2023/04/24 12:30:52 by alirola-          #+#    #+#             */
+/*   Updated: 2023/04/24 14:00:01 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t				count;
-	char				*dest;
-	char				*srce;
-
-	count = 0;
-	dest = (char *)dst;
-	srce = (char *)src;
-	if (!src && !dst)
-		return (0);
-	while (count < n)
+	if (*s == '\0' && c == '\0')
 	{
-		dest[count] = (char)srce[count];
-		count++;
+		return ((char *)s);
 	}
-	return (dst);
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+		if (*s == (char)c)
+			return ((char *)s);
+	}
+	return (0);
 }
