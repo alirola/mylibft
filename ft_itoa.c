@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-int numlen(long int n)
+int	numlen(long int n)
 {
 	size_t	i;
 
@@ -26,11 +26,11 @@ int numlen(long int n)
 	return (i + 1);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	lon;
-	long int n2;
+	char		*str;
+	size_t		lon;
+	long int	n2;
 
 	n2 = n;
 	if (n2 < 0)

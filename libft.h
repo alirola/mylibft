@@ -43,5 +43,6 @@ char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_putchar_fd(char c, int ft);
 void	ft_putstr_fd(char *s, int fd);
+char	*ft_itoa(int n);
 
 #endif 

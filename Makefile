@@ -30,6 +30,7 @@ FILES = ft_isalpha.c\
 		ft_strtrim.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
+		ft_itoa.c\
 
 OBJS = $(FILES:.c=.o)
 
