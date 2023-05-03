@@ -35,8 +35,13 @@ FILES = ft_isalpha.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 		ft_strmapi.c\
+		ft_split.c\
+
+FILES_BONUS = ft_lstnew_bonus.c\
 
 OBJS = $(FILES:.c=.o)
+
+OBJS_BONUS = $(FILES_BONUS:.c=.o)
 
 all : $(NAME)
 
@@ -47,11 +52,14 @@ $(OBJS) : $(FILES)
 	gcc $(FLAGS) -c $(FILES)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 	
 fclean:
-	rm -f $(NAME) $(OBJS)
+	rm -f $(NAME) $(OBJS) $(OBJS_BONUS)
 
-re : all 
+re : all
 
-.PHONY : all re fclean clean
+bonus: $(OBJS_BONUS) $(OBJS)
+		ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+
+.PHONY : all re fclean clean bonus

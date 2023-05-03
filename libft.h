@@ -6,7 +6,7 @@
 /*   By: alirola- <alirola-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 13:24:38 by alirola-          #+#    #+#             */
-/*   Updated: 2023/05/01 19:59:35 by alirola-         ###   ########.fr       */
+/*   Updated: 2023/05/03 13:01:51 by alirola-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	**ft_split(char const *s, char c);
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+t_list	*ft_lstnew(void *content);
 
 #endif 
