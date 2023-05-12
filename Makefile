@@ -65,9 +65,17 @@ clean:
 fclean:
 	rm -f $(NAME) $(OBJS) $(OBJS_BONUS)
 
-re : all
+re : fclean all
 
 bonus: $(OBJS_BONUS) $(OBJS)
 		ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 .PHONY : all re fclean clean bonus
+
+ ▄▀▀█▄   ▄▀▀▄ ▀▄  ▄▀▀▀▀▄   ▄▀▀▄▀▀▀▄  ▄▀▀█▄   ▄▀▀▄ █ 
+▐ ▄▀ ▀▄ █  █ █ █ █      █ █   █   █ ▐ ▄▀ ▀▄ █  █ ▄▀ 
+  █▄▄▄█ ▐  █  ▀█ █      █ ▐  █▀▀█▀    █▄▄▄█ ▐  █▀▄  
+ ▄▀   █   █   █  ▀▄    ▄▀  ▄▀    █   ▄▀   █   █   █ 
+█   ▄▀  ▄▀   █     ▀▀▀▀   █     █   █   ▄▀  ▄▀   █  
+▐   ▐   █    ▐            ▐     ▐   ▐   ▐   █    ▐  
+        ▐                                   ▐       
